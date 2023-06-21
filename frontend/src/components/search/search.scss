@@ -1,0 +1,58 @@
+
+$search-bar-height: 40px;
+$logo-width: 30px;
+$search-input-width: 50%;
+
+// Estilos de la barra de búsqueda
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $search-bar-height;
+  background: #FFE600;   
+  padding: 0 10px;
+  
+     
+  // Estilos del botón de búsqueda
+  .search-input-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    .search-logo {
+        img {
+            margin: 0 20px
+        }
+    }
+    // Estilos del campo de entrada de texto
+    .input-search {
+      width: $search-input-width;
+      height: $search-bar-height - 10;
+      border: none;
+      background: #fff;
+      
+      &:focus {
+        outline: none;
+      }
+      
+      &::placeholder {
+        color: #999999;
+      }
+    }
+    
+    // Estilos del botón de búsqueda
+    .search-button {
+      width: $search-bar-height;
+      height: $search-bar-height -10;
+      border: none;
+      padding: 5px 0;
+      background: #E7E7E7;   
+      cursor: pointer;          
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
