@@ -1,6 +1,20 @@
+import { Navigate } from "react-router-dom";
+import Product from "../../components/product/product";
+import Search from "../../components/search/search";
+import useSearchContext from "../../hooks/SearchContext";
+
 const ProductDetail = ({ match }) => {
-    const { id } = match.params; // Accede al ID del producto desde los parámetros de ruta
-    return <h1>Product Detail - ID: {id}</h1>;
-  };
+  const { search, setSearch } = useSearchContext();
+  if (search) {
+    setSearch("");
+    return <Navigate to="/" />;
+  }
+  return (
+    <>
+      <Search search={search} setSearch={setSearch} />
+      <Product />
+    </>
+  );
+};
 
 export default ProductDetail;
