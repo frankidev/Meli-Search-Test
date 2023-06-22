@@ -16,7 +16,7 @@ const Products = (props) => {
         <div className="d-flex product-image-description">
           <img src={`${thumbnail}`} alt="" />
           <div>
-            <h2>
+            <h1>
               ${price}
               {seller?.car_dealer && (
                 <img
@@ -25,8 +25,8 @@ const Products = (props) => {
                   alt="car-dealer"
                 />
               )}
-            </h2>
-            <h1>{title}</h1>
+            </h1>
+            <h2>{title}</h2>
           </div>
         </div>
         <p>{address?.state_name}</p>
